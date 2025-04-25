@@ -1,5 +1,7 @@
+/* ~~~~~~~~~~~~~~~~~~~~ 	    hero section        ~~~~~~~~~~~~~~~~~~~~ */
+
 #hero{
-    background: url(/src/imgs/amazon-tourism.jpg);
+    background: var(--hero-img);
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
@@ -21,11 +23,10 @@
     color: var(--hero-title-color);
     text-shadow: 0 0 10px var(--hero-title-color);
     text-align: center;
-    z-index: 5;
 }
 
 #hero #buttons-calltoaction-container{
-    z-index: 5;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,3 +56,257 @@
 }
 
 
+/* ~~~~~~~~~~~~~~~~~~~~ 	    about section        ~~~~~~~~~~~~~~~~~~~~ */
+
+#about{
+    display: grid;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 2rem;
+    padding: 20vh 4rem;
+    grid-template-areas: 
+    'title title'
+    'subtitle subtitle'
+    'img description'
+    'img description'
+    ;
+}
+
+#about #about-title{
+    font-family: var(--sections-title);
+    font-size: 4.8rem;
+    font-weight: 900;
+    color: var(--sections-title-color);
+    text-shadow: 0 0 10px var(--sections-title-color);
+    text-align: center;
+    grid-area: title;
+}
+
+#about #about-subtitle{
+    font-family: var(--sections-text);
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: var(--sections-text-color);
+    text-align: center;
+    margin-bottom: 10rem;
+    grid-area: subtitle;
+}
+
+
+
+#about #about-description{
+    font-family: var(--sections-text);
+    font-size: 1.6rem;
+    font-weight: 400;
+    padding: 2rem;
+    color: var(--sections-text-color);
+    text-align: justify;
+    grid-area: description;
+}
+
+#about #about-img{
+    height: 50vh;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: all 200ms ease-in-out;
+
+    
+    &:hover{
+        transform: scale(1.1);
+    }
+
+    grid-area: img;
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~ 	    destinies section        ~~~~~~~~~~~~~~~~~~~~ */
+
+#destiny{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem;
+    gap: 4rem;
+}
+
+#destiny #destiny-title{
+    font-family: var(--sections-title);
+    font-size: 4.8rem;
+    font-weight: 700;
+    color: var(--sections-title-color);
+    text-shadow: 0 0 10px var(--sections-title-color);
+    text-align: center;
+}
+
+#destiny #destinies-container{
+    /* swiper vai ficar aqui */
+    padding: 1rem 20rem;
+
+}
+
+#destiny #destinies-container .destiny-card{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    gap: 2rem;
+    background-color: var(--destiny-card-color);
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: all 400ms ease-in-out;  
+
+    grid-template-areas: 
+    'title title'
+    'img  description'
+    'link description'
+    ;
+}
+
+
+#destiny #destinies-container .destiny-card .destiny-card-title{
+    font-family: var(--destiny-card-title);
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: var(--destiny-card-title-color);
+    text-shadow: 0 0 10px var(--destiny-card-title-color);
+    text-align: center;
+    grid-area: title;
+}
+
+#destiny #destinies-container .destiny-card .destiny-card-img{
+    height: 300px;
+    width: 300px;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: all 200ms ease-in-out;
+    grid-area: img;
+}
+
+#destiny #destinies-container .destiny-card .destiny-card-description{
+    font-family: var(--destiny-card-text);
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--destiny-card-text-color);
+    text-align: justify;
+    grid-area: description;
+}
+
+#destiny #destinies-container .destiny-card .destiny-card-link{
+    padding: 1rem;
+    background-color: var(--destiny-card-link-color);
+    border-radius: 1rem;
+    border: 3px solid transparent;
+    color: var(--destiny-card-link-text-color);
+    font-family: var(--destiny-card-link-text);
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: all 200ms ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    grid-area: link;
+
+    &:hover, &:focus{
+        border: 3px solid var(--destiny-card-link-color);
+        background-color: transparent;
+        box-shadow: 0 0 10px var(--destiny-card-link-color);
+        transform: scale(1.05);
+    }
+
+    &:active{
+        transform: scale(0.95);
+    }
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~ 	    destinies section        ~~~~~~~~~~~~~~~~~~~~ */
+
+#feedbacks{
+    padding: 3rem;
+
+}
+
+#feedbacks #feedbacks-title{
+    font-family: var(--sections-title);
+    font-size: 4.8rem;
+    font-weight: 700;
+    color: var(--sections-title-color);
+    text-shadow: 0 0 10px var(--sections-title-color);
+    text-align: center;
+    margin-bottom: 10rem;
+}
+
+#feedbacks #feedbacks-cards{
+    /* aqui vai ser uma rolagem horizontal de cards */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    overflow-x: auto;
+    padding: 1rem 20rem;
+}
+
+#feedbacks #feedbacks-cards .feedback-card{
+    min-width: 200px;
+    height: 200px;
+    background-color: var(--feedback-card-color);
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: all 400ms ease-in-out;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+#feedbacks #feedbacks-cards .feedback-card .feedback-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+#feedbacks #feedbacks-cards .feedback-card .feedback-header .feedback-avatar{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+#feedbacks #feedbacks-cards .feedback-card .feedback-header .feedback-avatar figcaption{
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--feedbakc-card-name-color);
+    text-shadow: 0 0 10px var(--feedback-card-name-color);
+    text-align: center;
+    font-family: var(--feedback-card-name);
+    position: absolute;
+    bottom: -10px;
+    z-index: 20;
+}
+
+#feedbacks #feedbacks-cards .feedback-card .feedback-header .feedback-stars{
+    width: 100px;
+    height: 100px;
+    border: 5px solid crimson;
+}
+
+#feedbacks #feedbacks-cards .feedback-card .feedbakc-body{
+    padding: 2rem;
+
+}
+
+#feedbacks #feedbacks-cards .feedback-card .feedbakc-body .feedback-text{
+    font-family: var(--sections-text);
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--sections-text-color);
+    text-align: justify;
+}

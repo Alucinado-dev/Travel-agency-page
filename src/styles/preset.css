@@ -11,6 +11,19 @@
     --hero-title-color: crimson;
     --hero-btn-color: crimson;
 
+    --sections-title-color: slateblue;
+    --sections-text-color: black;
+
+    --destiny-card-color: whitesmoke;
+    --destiny-card-title-color: seagreen;
+    --destiny-card-text-color: #1f2a5f;
+    --destiny-card-link-color:#123456;
+    --destiny-card-link-text-color: whitesmoke;
+
+    --feedback-card-color: darkslateblue;
+    --feedbakc-card-name-color: gold;
+
+
     /* fonts */
     --name-font:
     --btn-header-font:
@@ -18,9 +31,30 @@
     --hero-btn-font:
     --hero-title-font:
 
+    --sections-title:
+    --sections-text:
+
+    --destiny-card-title:
+    --destiny-card-text:
+    --destiny-card-link-text:
+
+    --feedback-card-name:
+
+
+
     /* img */
     --icon-img:
     --icon-img-dark:
+    
+    --hero-img-1: url(/src/imgs/amazon-tourism.jpg);
+    --hero-img-2: url(/src/imgs/amazon-tour3.jpg);
+    --hero-img-3: url(/src/imgs/amazon-tour.jpeg);
+    --hero-img-4: url(/src/imgs/amazon-tour5.jpg);
+    --hero-img-5: url(/src/imgs/amazon-tourism2.jpg);
+    --hero-img-6: url(/src/imgs/amazon-tourism4.jpg);
+
+    
+    --hero-img: var(--hero-img-5);
 }
 
 
