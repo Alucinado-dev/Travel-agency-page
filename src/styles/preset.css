@@ -1,16 +1,22 @@
 :root{
     /* colors */
-    --header-color:
-    --name-color: 
-    --btn-header-color:
-    --icon-color:
-    --icon-color-dark:
+    --toggle-bg: gray;
+    --icon-color-dark: darkslategray;
+    --icon-color: blue;
 
-    --toggle-bg:
+    --header-color: wheat;
+    --name-color: green;
+    --btn-header-color: whitesmoke;
+
+    --hero-title-color: crimson;
+    --hero-btn-color: crimson;
 
     /* fonts */
     --name-font:
     --btn-header-font:
+
+    --hero-btn-font:
+    --hero-title-font:
 
     /* img */
     --icon-img:
@@ -24,3 +30,4 @@ img{
     width: 100%;
     height: 100%;
 }
+

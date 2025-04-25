@@ -1,0 +1,57 @@
+#hero{
+    background: url(/src/imgs/amazon-tourism.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.65); 
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40vh;
+    padding: 0 5rem;
+}
+
+#hero h1{
+    font-size: 6.4rem;
+    font-family: var(--hero-title-font);
+    color: var(--hero-title-color);
+    text-shadow: 0 0 10px var(--hero-title-color);
+    text-align: center;
+    z-index: 5;
+}
+
+#hero #buttons-calltoaction-container{
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+
+#hero #buttons-calltoaction-container .calltoaction-btn{
+    padding: 1rem;
+    background-color: transparent;
+    border-radius: 1rem;
+    border: 3px solid transparent;
+    color: var(--hero-btn-color);
+    font-family: var(--hero-btn-font);
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 200ms ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+
+    &:hover, &:focus{
+        border: 3px solid var(--hero-btn-color);
+        box-shadow: 0 0 10px var(--hero-btn-color);
+        transform: scale(1.1);
+    }
+}
+
+
