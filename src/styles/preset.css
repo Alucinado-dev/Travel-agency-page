@@ -61,9 +61,11 @@
     --hero-img-4: url(/src/imgs/amazon-tour5.jpg);
     --hero-img-5: url(/src/imgs/amazon-tourism2.jpg);
     --hero-img-6: url(/src/imgs/amazon-tourism4.jpg);
+    --hero-img-7: url(/src/imgs/amazon-tour-boat.jpg);
+
 
     
-    --hero-img: var(--hero-img-5);
+    --hero-img: var(--hero-img-4);
 }
 
 
