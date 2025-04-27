@@ -24,6 +24,11 @@
     --feedbakc-card-name-color: gold;
     --feedback-card-place-color: pink;
 
+    --form-label-color: lightblue;
+    --submit-btn-color: royalblue;
+    --submit-btn-text-color:#f4f4f4;
+    
+
 
     /* fonts */
     --name-font:
@@ -41,6 +46,8 @@
 
     --feedback-card-name:
     --feedback-card-place:
+
+    --form-label:
 
 
 
