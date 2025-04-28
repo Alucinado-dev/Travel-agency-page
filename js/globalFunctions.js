@@ -1,3 +1,4 @@
+/* faz a mudança do estado de botão theme, entre checked e não checked */
 const themeTogglerBtn = (toggle, body) => {
     toggle.addEventListener('change', (e) =>{
         const isChecked = e.target.checked;
@@ -5,14 +6,17 @@ const themeTogglerBtn = (toggle, body) => {
     });
 }
 
+/* muda o atributo src de um elemento */
 const changeImageDocument = (element, imgSrc) => { 
     element.src = imgSrc; 
 }
 
+/* muda uma variável global pré definida através de números reais. */
 const changeImageStylesheet = (root, newImg) => {
     root.style.setProperty('--hero-img', `var(--hero-img-${newImg})`);
 }
 
+/* chama a função changeImageStyle em um intervalo de tempo definido, por length vezes */
 const heroImgChange = (element, time, length) =>{
     let i = 0;
     setInterval(() => {
@@ -24,14 +28,16 @@ const heroImgChange = (element, time, length) =>{
     }, time);
 }
 
+/* define se chama changeImageDocument dependendo do isHover */
 const aboutImgChange = (element, isHover) =>{
     if(isHover){
-        element.src = 'travel2.jpg'
+        changeImageDocument(element, 'travel2.jpg');
     }else{
-        element.src = 'travel1.jpg'
+        changeImageDocument(element, 'travel1.jpg');
     }
 }
 
+/* define funcionalidade e parametros da library swiper.js */
 const swiperFunction = (swiper) =>{
     const swiperElement = new Swiper(swiper, {
         slidesPerView: 1,
@@ -57,6 +63,7 @@ const swiperFunction = (swiper) =>{
       });
 }
 
+/* validação do input nome */
 const isNameValid = (name) =>{
     if(name.length >= 3){
         return true;
@@ -65,6 +72,7 @@ const isNameValid = (name) =>{
     }
 }
 
+/* validação do input email  */
 const isEmailValid = (email) =>{
     if(email.includes('@')){
         return true;
@@ -73,6 +81,7 @@ const isEmailValid = (email) =>{
     }
 }
 
+/* validação do input mensagem */
 const isMessageValid = (message) =>{
     if(message.length >= 10){
         return true;
@@ -81,9 +90,10 @@ const isMessageValid = (message) =>{
     }
 }
 
-const invalidInputWarning = (whatInput) =>{
+/* constrói resposta visual caso o input seja inválido */
+const invalidInputWarning = (whatInput, errorMessage) =>{
     const warning = document.createElement('p');
-    warning.textContent = `Invalid ${whatInput}`;
+    warning.textContent = `Invalid ${whatInput}, ${errorMessage}`;
     warning.style.color = 'red';
     warning.style.fontSize = '12px';
     warning.style.marginTop = '5px';
@@ -91,6 +101,7 @@ const invalidInputWarning = (whatInput) =>{
     
 }
 
+/* remove mensagem de input visual */
 const removeInvalidInputWarning = (element) =>{
     const warning = element.nextElementSibling;
     if(warning && warning.tagName === 'P'){
@@ -98,6 +109,7 @@ const removeInvalidInputWarning = (element) =>{
     }
 }
 
+/* verifica validações de todo o formulário */
 const formValidation = (name, email, message) =>{
     const nameInput = document.getElementById(name);
     const emailInput = document.getElementById(email);
@@ -105,24 +117,28 @@ const formValidation = (name, email, message) =>{
     const nameIsValid = isNameValid(nameInput.value);
     const emailIsValid = isEmailValid(emailInput.value);
     const messageIsValid = isMessageValid(messageInput.value);
+
     if(!nameIsValid){
         removeInvalidInputWarning(nameInput);
         nameInput.after(invalidInputWarning('name'));
     }else{
         removeInvalidInputWarning(nameInput);
     }
+
     if(!emailIsValid){
         removeInvalidInputWarning(emailInput);
         emailInput.after(invalidInputWarning('email'));
     }else{
         removeInvalidInputWarning(emailInput);
     }
+
     if(!messageIsValid){
         removeInvalidInputWarning(messageInput);
         messageInput.after(invalidInputWarning('message'));
     }else{
         removeInvalidInputWarning(messageInput);
     }
+
     if(nameIsValid && emailIsValid && messageIsValid){
         return true;
     }else{
