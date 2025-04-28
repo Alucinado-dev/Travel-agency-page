@@ -1,8 +1,28 @@
+/* verifica se há tema salvo no browser */
+const getSavedTheme = () => {
+    if (localStorage.getItem('theme')){
+        return localStorage.getItem('theme');
+    }
+    
+    return null;
+}
+
+
 /* faz a mudança do estado de botão theme, entre checked e não checked */
-const themeTogglerBtn = (toggle, body) => {
+const themeTogglerBtn = (toggle, root) => {
     toggle.addEventListener('change', (e) =>{
         const isChecked = e.target.checked;
-        body.classList.toggle('dark', isChecked);
+        /* toggle root data-theme */
+        
+        if(isChecked){
+            root.setAttribute('data-theme', 'dark');
+            localStorage.setItem('theme', 'dark');
+        }else{
+            root.setAttribute('data-theme', 'light');
+            localStorage.setItem('theme', 'light');
+        }
+        
+
     });
 }
 
@@ -31,9 +51,9 @@ const heroImgChange = (element, time, length) =>{
 /* define se chama changeImageDocument dependendo do isHover */
 const aboutImgChange = (element, isHover) =>{
     if(isHover){
-        changeImageDocument(element, 'travel2.jpg');
+        changeImageDocument(element, 'src/imgs/travel2.jpg');
     }else{
-        changeImageDocument(element, 'travel1.jpg');
+        changeImageDocument(element, 'src/imgs/travel1.jpg');
     }
 }
 
@@ -109,6 +129,14 @@ const removeInvalidInputWarning = (element) =>{
     }
 }
 
+/* retorna os inputs para o estado inicial com string vazia */
+const resetForm = (name, email, message) =>{
+    name.value = '';
+    email.value = '';
+    message.value = '';
+}
+
+
 /* verifica validações de todo o formulário */
 const formValidation = (name, email, message) =>{
     const nameInput = document.getElementById(name);
@@ -147,5 +175,12 @@ const formValidation = (name, email, message) =>{
 }
 
 
+const showHeader = (header) =>{
+    header.classList.add('active');
+}
 
+const hideHeader = (header) =>{
+    header.classList.remove('active');
+    
+}
 
