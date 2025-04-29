@@ -82,16 +82,27 @@ navLinks.forEach(link => {
 
 
 /* gerencia mudança de estilos na header baseado no scroll */
+if (!header.classList.contains('hidden')) { 
+    hideHeader(header); 
+}
+
+let lastScrollY = window.scrollY;
+
+
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 0) {
-        if (!header.classList.contains('active')) {
-            showHeader(header);
-        }
-    } else {
-        if (header.classList.contains('active')) {
-            hideHeader(header);
-        }
+    const currentScrollY = window.scrollY;
+
+    /* Condição para MOSTRAR (showHeader): Rolando PARA CIMA e não está no topo absoluto */
+    if (currentScrollY < lastScrollY) {
+        showHeader(header); 
     }
+    /* Condição para ESCONDER (hideHeader): Rolando PARA BAIXO ou está no topo absoluto */
+    else if (currentScrollY > lastScrollY) {
+        hideHeader(header); 
+    }
+
+    /* evita valores negativos (acontece em alguns browsers) */
+    lastScrollY = currentScrollY <= 0 ? 0 : currentScrollY;
 });
 
 /* gerencia mudança de classes nos elementos hidden */

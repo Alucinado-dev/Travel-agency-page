@@ -1,16 +1,19 @@
-
-
 header{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem 1rem;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
     background-color: var(--header-color);
-    transition: all 700ms ease;
+    transition: all 400ms ease-out;
 }
 
 header.hidden{
-    transform: translateY(-100px);
+    transform: translateY(-100%);
 }
 
 header #logo{
@@ -41,14 +44,17 @@ header ul{
 }
 
 header ul a{
+    display: inline-block;
     padding: 1rem;
-    border: 1px solid var(--btn-header-color);
     border-radius: 5px;
     color: var(--btn-header-color);
     transition: all 300ms ease-in-out;
     font-size: 1.6rem;
     font-weight: 600;
     font-family: var(--btn-header-font);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-sizing: border-box;
 
     &:active{
         background-color: var(--btn-header-color);
@@ -61,6 +67,7 @@ header ul a{
         width: 0%;
         height: 2px;
         background-color: var(--btn-header-color);
+        transition: all 300ms ease-in-out;
 
     }
 
@@ -97,7 +104,9 @@ header #theme-toggle #toggle-icon{
     height: 28px;
     border-radius: 50%;
     background-color: var(--icon-color);
-    background: var(--icon-img) no-repeat center;
+    background-image: var(--icon-img);
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: 60%;
     filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.2));
     transition: all 400ms ease;

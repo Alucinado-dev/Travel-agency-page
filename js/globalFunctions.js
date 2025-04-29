@@ -3,7 +3,6 @@ const getSavedTheme = () => {
     if (localStorage.getItem('theme')){
         return localStorage.getItem('theme');
     }
-    
     return null;
 }
 
@@ -163,10 +162,14 @@ const formValidation = (name, email, message) =>{
 
 
 const showHeader = (header) =>{
-    header.classList.add('active');
+   if (header.classList.contains('hidden')) {
+    header.classList.remove('hidden');
+}
 }
 
 const hideHeader = (header) =>{
-    header.classList.remove('active');
+    if (!header.classList.contains('hidden')) {
+        header.classList.add('hidden');
+   }
 }
 
