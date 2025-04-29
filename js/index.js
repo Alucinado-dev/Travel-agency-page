@@ -13,11 +13,18 @@ const emailInput = document.getElementById('email-input');
 const messageInput = document.getElementById('message-input');
 
 // const swiper = '.swiper';
-
+const savedTheme = getSavedTheme();
 
 /* define estado de botão themeToggle baseado no tema salvo em browser  */
-if (getSavedTheme() === 'dark') {
-    themeToggle.checked = true;
+if (savedTheme) {
+    root.setAttribute('data-theme', savedTheme);
+    if (savedTheme === 'dark') { 
+        themeToggle.checked = true;
+    }
+} else {
+    /* define ligth como tema padrão caso não haja tema salvo */
+    root.setAttribute('data-theme', 'light');
+    localStorage.setItem('theme', 'light');
 }
 
 root.setAttribute('data-theme', localStorage.getItem('theme'));
@@ -40,10 +47,15 @@ aboutImg.addEventListener('mouseout', () =>{
 /* define novo comportamento para o formulário */
 form.addEventListener('submit', (e) =>{
     e.preventDefault();
-    const isValid = formValidation('name', 'email', 'message');
+    const isValid = formValidation(nameInput,emailInput, messageInput);
     if(isValid){
-        alert('Form submitted successfully!');
+        const successMsg = document.createElement('p');
+        successMsg.id = 'form-success-message';
+        successMsg.textContent = 'Obrigado pelo contato! Sua mensagem foi enviada.';
+        form.after(successMsg);
+
         resetForm(nameInput, emailInput, messageInput);
+        setTimeout(removeSuccessMessage, 5000);
     }
 });
 
@@ -72,24 +84,33 @@ navLinks.forEach(link => {
 /* gerencia mudança de estilos na header baseado no scroll */
 window.addEventListener('scroll', () => {
     if (window.scrollY > 0) {
-        showHeader(header);
+        if (!header.classList.contains('active')) {
+            showHeader(header);
+        }
     } else {
-        hideHeader(header);
+        if (header.classList.contains('active')) {
+            hideHeader(header);
+        }
     }
 });
 
 /* gerencia mudança de classes nos elementos hidden */
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('show');
-        } else {
-            entry.target.classList.remove('show');
-        }
+if (hiddenElements.length > 0) {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+            } else {
+                entry.target.classList.remove('show');
+            }
+        });
     });
-});
 
-hiddenElements.forEach((el) => observer.observe(el));
+    hiddenElements.forEach((el) => observer.observe(el));
+} else {
+    console.warn("No elements with class 'hidden' found for Intersection Observer.");
+}
+
 
 
 

@@ -21,8 +21,6 @@ const themeTogglerBtn = (toggle, root) => {
             root.setAttribute('data-theme', 'light');
             localStorage.setItem('theme', 'light');
         }
-        
-
     });
 }
 
@@ -85,38 +83,25 @@ const swiperFunction = (swiper) =>{
 
 /* validação do input nome */
 const isNameValid = (name) =>{
-    if(name.length >= 3){
-        return true;
-    }else{
-        return false;
-    }
+    return name.length >= 3;
 }
 
 /* validação do input email  */
 const isEmailValid = (email) =>{
-    if(email.includes('@')){
-        return true;
-    }else{
-        return false;
-    }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email); 
 }
 
 /* validação do input mensagem */
 const isMessageValid = (message) =>{
-    if(message.length >= 10){
-        return true;
-    }else{
-        return false;
-    }
+    return message.length >= 10;
 }
 
 /* constrói resposta visual caso o input seja inválido */
-const invalidInputWarning = (whatInput, errorMessage) =>{
+const invalidInputWarning = (errorMessage) =>{
     const warning = document.createElement('p');
-    warning.textContent = `Invalid ${whatInput}, ${errorMessage}`;
-    warning.style.color = 'red';
-    warning.style.fontSize = '12px';
-    warning.style.marginTop = '5px';
+    warning.textContent =  errorMessage;
+    warning.classList.add('invalid-input-warning');
     return warning;
     
 }
@@ -124,8 +109,15 @@ const invalidInputWarning = (whatInput, errorMessage) =>{
 /* remove mensagem de input visual */
 const removeInvalidInputWarning = (element) =>{
     const warning = element.nextElementSibling;
-    if(warning && warning.tagName === 'P'){
+    if(warning && warning.classList.contains('invalid-input-warning')){
         warning.remove();
+    }
+}
+
+const removeSuccessMessage = () => {
+    const successMsg = document.getElementById('form-success-message');
+    if (successMsg) {
+        successMsg.remove();
     }
 }
 
@@ -139,39 +131,34 @@ const resetForm = (name, email, message) =>{
 
 /* verifica validações de todo o formulário */
 const formValidation = (name, email, message) =>{
-    const nameInput = document.getElementById(name);
-    const emailInput = document.getElementById(email);
-    const messageInput = document.getElementById(message);
-    const nameIsValid = isNameValid(nameInput.value);
-    const emailIsValid = isEmailValid(emailInput.value);
-    const messageIsValid = isMessageValid(messageInput.value);
+    const nameValue = name.value.trim();
+    const emailValue = email.value.trim();
+    const messageValue = message.value.trim();
 
-    if(!nameIsValid){
-        removeInvalidInputWarning(nameInput);
-        nameInput.after(invalidInputWarning('name'));
-    }else{
-        removeInvalidInputWarning(nameInput);
+    let isFormValid = true;
+
+
+    removeInvalidInputWarning(nameInput); 
+
+    if(!isNameValid(nameValue)){
+        nameInput.after(invalidInputWarning('O nome deve ter pelo menos 3 caracteres.'));
+        isFormValid = false; 
     }
 
-    if(!emailIsValid){
-        removeInvalidInputWarning(emailInput);
-        emailInput.after(invalidInputWarning('email'));
-    }else{
-        removeInvalidInputWarning(emailInput);
+    removeInvalidInputWarning(emailInput); 
+    if(!isEmailValid(emailValue)){
+        emailInput.after(invalidInputWarning('Por favor, insira um email válido.'));
+        isFormValid = false; 
     }
 
-    if(!messageIsValid){
-        removeInvalidInputWarning(messageInput);
-        messageInput.after(invalidInputWarning('message'));
-    }else{
-        removeInvalidInputWarning(messageInput);
+    removeInvalidInputWarning(messageInput); 
+    if(!isMessageValid(messageValue)){
+        messageInput.after(invalidInputWarning('A mensagem deve ter pelo menos 10 caracteres.'));
+        isFormValid = false; 
     }
 
-    if(nameIsValid && emailIsValid && messageIsValid){
-        return true;
-    }else{
-        return false;
-    }
+    
+    return isFormValid;
 }
 
 
@@ -181,6 +168,5 @@ const showHeader = (header) =>{
 
 const hideHeader = (header) =>{
     header.classList.remove('active');
-    
 }
 

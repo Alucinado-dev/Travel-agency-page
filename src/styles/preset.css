@@ -76,3 +76,19 @@ img{
     height: 100%;
 }
 
+
+/* --- Animações de Entrada (Scroll) --- */
+
+/* Estado Inicial: Elementos estão escondidos */
+.hidden {
+    opacity: 0; 
+    transform: translateY(100px) scale(0.8); 
+    transition: opacity 500ms ease-out, transform 800ms ease-out;
+    will-change: opacity, transform;
+}
+  
+  /* Estado Final: Elementos estão visíveis */
+.show {
+    opacity: 1; 
+    transform: translateY(0) scale(1);
+}
