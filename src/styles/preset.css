@@ -1,11 +1,12 @@
 :root{
     /* colors */
-    --toggle-bg: gray;
-    --icon-color-dark: darkslategray;
-    --icon-color: blue;
+/*     --name-color-1: #28c2a0;
+    --name-color-2: #5bcba5;
+    --name-color-3: #7ae3d7; */
 
-    --header-color: wheat;
-    --name-color: green;
+    --name-color-1: #3ad29f;
+    --name-color-2: #6cd8d3;
+    --name-color-3: #88c1e8; 
     --btn-header-color: whitesmoke;
 
     --hero-title-color: crimson;
@@ -31,7 +32,7 @@
 
 
     /* fonts */
-    --name-font:
+    --name-font: 'Cinzel decorative', cursive;
     --btn-header-font:
 
     --hero-btn-font:
@@ -68,6 +69,33 @@
     --hero-img: var(--hero-img-4);
 }
 
+[data-theme="dark"]{
+    --bg-color:#121212;
+    --toggle-bg: #0b3d3c;
+    --icon-color: #f1e3ff;
+    --header-bg: rgba(0, 0, 0, 0.6);
+}
+
+[data-theme="light"]{
+    --bg-color:#f4f4f4;
+    --toggle-bg: #0080ff;
+    --icon-color: #f4d160;
+    --header-bg: rgba(0, 0, 0, 0.4);
+}
+
+body{
+    background-color: var(--bg-color);
+    transition: all 1000ms ease-out;  
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+section{
+    scroll-margin-top: 80px;
+    height: 100dvh;
+}
 
 img{
     width: 100%;

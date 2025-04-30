@@ -8,7 +8,7 @@ const getSavedTheme = () => {
 
 
 /* faz a mudança do estado de botão theme, entre checked e não checked */
-const themeTogglerBtn = (toggle, root) => {
+const themeTogglerBtn = (toggle, root, icon ) => {
     toggle.addEventListener('change', (e) =>{
         const isChecked = e.target.checked;
         /* toggle root data-theme */
@@ -16,9 +16,14 @@ const themeTogglerBtn = (toggle, root) => {
         if(isChecked){
             root.setAttribute('data-theme', 'dark');
             localStorage.setItem('theme', 'dark');
+            icon.classList.remove('fa-sun');
+            icon.classList.add('fa-moon');
+            
         }else{
             root.setAttribute('data-theme', 'light');
             localStorage.setItem('theme', 'light');
+            icon.classList.remove('fa-moon');
+            icon.classList.add('fa-sun');
         }
     });
 }

@@ -5,6 +5,7 @@ const hiddenElements = document.querySelectorAll('.hidden');
 const navLinks = document.querySelectorAll('.nav-link');
 
 const themeToggle = document.getElementById('theme-toggle');
+const ToggleIcon = document.getElementById('toggle-icon');
 const aboutImg = document.getElementById('travel-img');
 const menu = document.getElementById('menu');
 const form = document.getElementById('contact-form');
@@ -20,17 +21,19 @@ if (savedTheme) {
     root.setAttribute('data-theme', savedTheme);
     if (savedTheme === 'dark') { 
         themeToggle.checked = true;
+    } else {
+        themeToggle.checked = false;
     }
+
 } else {
     /* define ligth como tema padrão caso não haja tema salvo */
     root.setAttribute('data-theme', 'light');
     localStorage.setItem('theme', 'light');
 }
 
-root.setAttribute('data-theme', localStorage.getItem('theme'));
 
 
-themeTogglerBtn(themeToggle, root); /* deixa botão theme disponível */
+themeTogglerBtn(themeToggle, root, ToggleIcon); /* deixa botão theme disponível */
 heroImgChange(root, 3000, 7); /* faz a mudança da hero image */
 // swiperFunction(swiper); /* deixa o swiper disponível */
 
