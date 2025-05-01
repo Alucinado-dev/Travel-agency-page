@@ -14,8 +14,9 @@
     --hero-title-color-2: #197a72 ;
     --hero-btn-color: #82d6ee;
 
-    --sections-title-color: slateblue;
-    --sections-text-color: black;
+
+
+
 
     --destiny-card-color: whitesmoke;
     --destiny-card-title-color: seagreen;
@@ -40,7 +41,8 @@
     --hero-btn-font:
     --hero-title-font: playfair display;
 
-    --sections-title:
+    --sections-title: cormorant garamond;
+    --sections-subtitle: 
     --sections-text:
 
     --destiny-card-title:
@@ -73,14 +75,28 @@
     --toggle-bg: #0b3d3c;
     --icon-color: #f1e3ff;
     --header-bg: rgba(0, 0, 0, 0.6);
+
+    --sections-title-color: #5ae0b8;
+    --sections-text-color: #dfe7fd;
+    --sections-subtitle-color: #a68a64;
 }
 
 [data-theme="light"]{
     --bg-color:#9ecda5;
-/*     --toggle-bg: #88c1e8; */
+    /* --toggle-bg: ; */
     --toggle-bg: #82d6ee;
     --icon-color: #f4d160;
     --header-bg: rgba(0, 0, 0, 0.4);
+    
+    --sections-title-color: #0c3a3a;
+    --sections-text-color: #1b4332;
+    --sections-subtitle-color: #582f0e;
+
+    --destiny-card-color: #1d3937;
+    --destiny-card-title-color: #9ecda5;
+    --destiny-card-text-color: #f3f7f9;
+    --destiny-card-link-color: #3ad29f;
+    --destiny-card-link-text-color: #195042;
 }
 
 body{
@@ -94,6 +110,7 @@ html{
 
 section{
     height: 100dvh;
+    box-sizing: border-box;
 }
 
 img{
@@ -107,13 +124,14 @@ img{
 /* estado inicial: elementos escondidos */
 .hidden {
     opacity: 0; 
-    transform: translateY(100px) scale(0.8); 
-    transition: opacity 500ms ease-out, transform 800ms ease-out;
+    transform: scale(0.2) ; 
+    transition: opacity 500ms ease-out, transform 1200ms ease-out;
     will-change: opacity, transform;
 }
   
   /* estado final: elementos visíveis */
 .show {
     opacity: 1; 
-    transform: translateY(0) scale(1);
+    transform:  scale(1) ;
+    transition: opacity 500ms ease-in, transform 1200ms ease-in;
 }

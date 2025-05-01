@@ -40,7 +40,7 @@
     border-radius: 1rem;
     border: 3px solid transparent;
     color: var(--hero-btn-color);
-    text-shadow: 0 0 5px var(--hero-btn-color);
+    text-shadow: 0 0 2px var(--hero-btn-color);
     font-family: var(--hero-btn-font);
     font-size: 1.6rem;
     font-weight: 600;
@@ -52,7 +52,7 @@
 
     &:hover, &:focus{
         border: 3px solid var(--hero-btn-color);
-        box-shadow: 0 0 10px var(--hero-btn-color);
+        box-shadow: 0 0 3px var(--hero-btn-color);
         transform: scale(1.1);
     }
 }
@@ -64,12 +64,11 @@
     display: grid;
     justify-content: space-evenly;
     align-items: center;
-    gap: 2rem;
-    padding: 20vh 4rem;
+    padding: 5rem 4rem;
     grid-template-areas: 
     'title title'
     'subtitle subtitle'
-    'img description'
+    '. .'
     'img description'
     ;
 }
@@ -79,45 +78,44 @@
     font-size: 4.8rem;
     font-weight: 900;
     color: var(--sections-title-color);
-    text-shadow: 0 0 10px var(--sections-title-color);
+    text-shadow: 0 0 4px var(--sections-title-color);
     text-align: center;
+    transition: all 1000ms ease-out;  
     grid-area: title;
 }
 
 #about #about-subtitle{
-    font-family: var(--sections-text);
+    font-family: var(--sections-subtitle);
     font-size: 3.2rem;
     font-weight: 700;
-    color: var(--sections-text-color);
+    color: var(--sections-subtitle-color);
     text-align: center;
-    margin-bottom: 10rem;
+    transition: all 1000ms ease-out;  
     grid-area: subtitle;
 }
 
 
 
 #about #about-description{
+    max-width: 40dvw;
     font-family: var(--sections-text);
     font-size: 1.6rem;
     font-weight: 400;
+    line-height: 1.2;
     padding: 2rem;
     color: var(--sections-text-color);
     text-align: justify;
+    transition: all 1000ms ease-out;  
     grid-area: description;
 }
 
 #about #about-img{
     height: 50vh;
+    width: 35dvw;
     border-radius: 1rem;
     overflow: hidden;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    transition: all 200ms ease-in-out;
-
-    
-    &:hover{
-        transform: scale(1.1);
-    }
-
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: all 500ms ease-in-out;
     grid-area: img;
 }
 
@@ -138,8 +136,9 @@
     font-size: 4.8rem;
     font-weight: 700;
     color: var(--sections-title-color);
-    text-shadow: 0 0 10px var(--sections-title-color);
+    text-shadow: 0 0 5px var(--sections-title-color);
     text-align: center;
+    transition: all 1000ms ease-out;  
 }
 
 #destiny #destinies-container{
@@ -216,6 +215,8 @@
         border: 3px solid var(--destiny-card-link-color);
         background-color: transparent;
         box-shadow: 0 0 10px var(--destiny-card-link-color);
+        color: var(--destiny-card-link-color);
+        text-shadow: 0 0 3px var(--destiny-card-link-color);
         transform: scale(1.05);
     }
 
