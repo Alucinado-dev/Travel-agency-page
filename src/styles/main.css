@@ -171,7 +171,7 @@
     font-size: 3.2rem;
     font-weight: 700;
     color: var(--destiny-card-title-color);
-    text-shadow: 0 0 10px var(--destiny-card-title-color);
+    text-shadow: 0 0 3px var(--destiny-card-title-color);
     text-align: center;
     grid-area: title;
 }
@@ -209,6 +209,7 @@
     transition: all 200ms ease-in-out;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     cursor: pointer;
+    text-align: center;
     grid-area: link;
 
     &:hover, &:focus{
@@ -229,7 +230,7 @@
 
 #feedbacks{
     padding: 3rem;
-
+    overflow-x: hidden;
 }
 
 #feedbacks #feedbacks-title{
@@ -240,16 +241,36 @@
     text-shadow: 0 0 10px var(--sections-title-color);
     text-align: center;
     margin-bottom: 10rem;
+
 }
 
 #feedbacks #feedbacks-cards{
-    /* aqui vai ser uma rolagem horizontal de cards */
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 4rem;
-    overflow-x: auto;
+
     padding: 1rem 20rem;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+
+    &::-webkit-scrollbar-track{
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar{
+        width: 10px;
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb{
+        background-color: transparent;
+        border-radius: 1000px;
+    }
+
+    &:hover::-webkit-scrollbar-thumb{
+        background-color: rgba(0, 0, 0, 0.5);
+    }
 }
 
 #feedbacks #feedbacks-cards .feedback-card{
@@ -300,11 +321,23 @@
     font-family: var(--feedback-card-name);
 }
 
-#feedbacks #feedbacks-cards .feedback-card .feedback-header .feedback-stars{
-    width: 50px;
+#feedbacks #feedbacks-cards .feedback-card .feedback-header .feedback-score{
+    width: 150px;
     height: 50px;
-    border: 5px solid crimson;
+    border-radius: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffd167;
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: var(--feedback-card-place);
 }
+
+#feedbacks #feedbacks-cards .feedback-card .feedback-header .feedback-score i{
+    color: #108ab1;
+}
+
 
 #feedbacks #feedbacks-cards .feedback-card .feedback-body{
     padding: 1rem;
@@ -318,6 +351,7 @@
     color: var(--feedback-card-place-color);
     text-shadow: 0 0 10px var(--feedback-card-place-color);
     text-align: center;
+    padding: 1rem;
     margin-bottom: 1rem;
 }
 

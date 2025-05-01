@@ -16,18 +16,6 @@
 
 
 
-
-
-    --destiny-card-color: whitesmoke;
-    --destiny-card-title-color: seagreen;
-    --destiny-card-text-color: #1f2a5f;
-    --destiny-card-link-color:#123456;
-    --destiny-card-link-text-color: whitesmoke;
-
-    --feedback-card-color: darkslateblue;
-    --feedbakc-card-name-color: gold;
-    --feedback-card-place-color: pink;
-
     --form-label-color: lightblue;
     --submit-btn-color: royalblue;
     --submit-btn-text-color:#f4f4f4;
@@ -79,6 +67,16 @@
     --sections-title-color: #5ae0b8;
     --sections-text-color: #dfe7fd;
     --sections-subtitle-color: #a68a64;
+
+    --destiny-card-color: #1d3937;
+    --destiny-card-title-color: #9ecda5;
+    --destiny-card-text-color: #f3f7f9;
+    --destiny-card-link-color: #3ad29f;
+    --destiny-card-link-text-color: #195042;
+
+    --feedback-card-color: #073a4b;
+    --feedbakc-card-name-color:  #f04770;
+    --feedback-card-place-color: #06d7a0 ;
 }
 
 [data-theme="light"]{
@@ -92,11 +90,11 @@
     --sections-text-color: #1b4332;
     --sections-subtitle-color: #582f0e;
 
-    --destiny-card-color: #1d3937;
-    --destiny-card-title-color: #9ecda5;
-    --destiny-card-text-color: #f3f7f9;
-    --destiny-card-link-color: #3ad29f;
-    --destiny-card-link-text-color: #195042;
+    --destiny-card-color: #111b2e;
+    --destiny-card-title-color: #ffd72a;
+    --destiny-card-text-color: #eeffef;
+    --destiny-card-link-color: #c52a5d;
+    --destiny-card-link-text-color: #182641;
 }
 
 body{
@@ -124,7 +122,7 @@ img{
 /* estado inicial: elementos escondidos */
 .hidden {
     opacity: 0; 
-    transform: scale(0.2) ; 
+    transform: scale(0.9) ; 
     transition: opacity 500ms ease-out, transform 1200ms ease-out;
     will-change: opacity, transform;
 }
