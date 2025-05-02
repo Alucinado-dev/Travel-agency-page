@@ -14,6 +14,7 @@
     <!-- icons -->
     <script src="https://kit.fontawesome.com/db1c54e319.js" crossorigin="anonymous"></script>
     <!-- stylesheets -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="src/styles/reset.css">
     <link rel="stylesheet" href="src/styles/preset.css">
     <link rel="stylesheet" href="src/styles/header.css">
@@ -54,7 +55,7 @@
             <h1>Explore os encantos da Amazônia com quem conhece cada trilha</h1>
             
             <div id="buttons-calltoaction-container">
-                <button class="calltoaction-btn">  <i class="fa-solid fa-plane-departure"></i> conheça nossos destinos </button>               
+                <button class="calltoaction-btn"> <i class="fa-solid fa-plane-departure"></i> conheça nossos destinos </button>               
                 <button class="calltoaction-btn"> <i class="fa-solid fa-location-dot"></i> fale com o nosso guia </button>
             </div>
         </section>
@@ -85,58 +86,72 @@
         <section id="destiny" class="hidden">
             <h2 id="destiny-title">Nossos destinos</h2>
 
-            <div id="destinies-container">
+            <div class="swiper" id="destinies-container">
                 <!-- fazer o swiper funcionar aqui -->
-                <article class="destiny-card">
-                    <h3 class="destiny-card-title">Alter do chão</h3>
+                <div class="swiper-wrapper">
 
-                    <figure class="destiny-card-img">
-                        <img  src="src/imgs/destinies/alter-do-chao.jpg" alt="vista aérea de alter do chão">
-                    </figure>
+                    <article class="destiny-card swiper-slide">
+                        <h3 class="destiny-card-title">Alter do chão</h3>
+    
+                        <figure class="destiny-card-img">
+                            <img  src="src/imgs/destinies/alter-do-chao.jpg" alt="vista aérea de alter do chão">
+                        </figure>
+    
+                        <p class="destiny-card-description">
+                            Alter do chão é um dos destinos mais procurados da amazônia, conhecido por suas praias de água doce e paisagens exuberantes.
+                            <br> <br>
+                            Com suas praias de areia branca, águas cristalinas e rica biodiversidade, é um paraíso para os amantes da natureza e aventureiros.
+                            <br> <br>
+                            Explore a Floresta Nacional do Tapajós, nade com botos cor-de-rosa, visite a comunidade ribeirinha de Jamaraquá e maravilhe-se com o encontro das águas entre os rios Tapajós e Amazonas.
+                        </p>
+    
+                        <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjcw7D4jYONAxWCppUCHVSAB9YQFnoECGUQAQ&url=https%3A%2F%2Fwww.melhoresdestinos.com.br%2Falter-do-chao-para.html&usg=AOvVaw0bxzsQ4l0KfHTk0x1yMxvZ&opi=89978449" class="destiny-card-link">Saiba mais <i class="fa-solid fa-up-right-from-square"></i></a>
+                    </article>
+                </div>
 
-                    <p class="destiny-card-description">
-                        Alter do chão é um dos destinos mais procurados da amazônia, conhecido por suas praias de água doce e paisagens exuberantes.
-                        <br> <br>
-                        Com suas praias de areia branca, águas cristalinas e rica biodiversidade, é um paraíso para os amantes da natureza e aventureiros.
-                        <br> <br>
-                        Explore a Floresta Nacional do Tapajós, nade com botos cor-de-rosa, visite a comunidade ribeirinha de Jamaraquá e maravilhe-se com o encontro das águas entre os rios Tapajós e Amazonas.
-                    </p>
+                <div class="swiper-pagination"></div>
 
-                    <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjcw7D4jYONAxWCppUCHVSAB9YQFnoECGUQAQ&url=https%3A%2F%2Fwww.melhoresdestinos.com.br%2Falter-do-chao-para.html&usg=AOvVaw0bxzsQ4l0KfHTk0x1yMxvZ&opi=89978449" class="destiny-card-link">Saiba mais <i class="fa-solid fa-up-right-from-square"></i></a>
-                </article>
-
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
         </section>
 
         <section id="feedbacks" class="hidden">
             <h2 id="feedbacks-title">Depoimentos</h2>
 
-            <div id="feedbacks-cards">
-                <article class="feedback-card">
-                    <div class="feedback-header">
+            <div id="feedbacks-cards" class="swiper">
+                <div class="swiper-wrapper">
 
-                        <figure class="feedback-avatar">
-                            <figcaption> Carlos</figcaption>
-                            <img src="src/imgs/avatars/carlos.jpg" alt="Designed by Freepik">
-                        </figure>
-
-                        <div class="feedback-score">
-                            <h5>5</h5>
-                            <h5>/10  <i class="fa-solid fa-ranking-star"></i> </h5>
-                            
+                    <article class="feedback-card swiper-slide">
+                        <div class="feedback-header">
+        
+                            <figure class="feedback-avatar">
+                                <figcaption> Carlos</figcaption>
+                                <img src="src/imgs/avatars/carlos.jpg" alt="Designed by Freepik">
+                            </figure>
+        
+                            <div class="feedback-score">
+                                <h5>5</h5>
+                                <h5>/10  <i class="fa-solid fa-ranking-star"></i> </h5>
+                                
+                            </div>
                         </div>
-                    </div>
+        
+                        <div class="feedback-body">
+                            <h4 class="feedback-place">Alter do chão</h4>
+        
+                            <p class="feedback-text"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam doloribus molestias neque cupiditate placeat id inventore reprehenderit dolores cumque. Ea animi earum sit quas illum ex omnis vel voluptate atque.
+                                Praesentium exercitationem error perspiciatis cupiditate officiis vel ut ratione veniam, quia corporis totam ullam quo, natus maxime consequatur, temporibus quibusdam qui corrupti quam molestias beatae quos nesciunt eligendi? Quo, qui.
+                            </p>
+                        </div>
+                    </article>
 
-                    <div class="feedback-body">
-                        <h4 class="feedback-place">Alter do chão</h4>
+                </div>
 
-                        <p class="feedback-text"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam doloribus molestias neque cupiditate placeat id inventore reprehenderit dolores cumque. Ea animi earum sit quas illum ex omnis vel voluptate atque.
-                            Praesentium exercitationem error perspiciatis cupiditate officiis vel ut ratione veniam, quia corporis totam ullam quo, natus maxime consequatur, temporibus quibusdam qui corrupti quam molestias beatae quos nesciunt eligendi? Quo, qui.
-                        </p>
-                    </div>
+                <div class="swiper-pagination"></div>
 
-
-                </article>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
         </section>
 
@@ -180,6 +195,8 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/TextPlugin.min.js"></script>
+    <!-- Swiper js library -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> 
     <!-- my code -->
     <script src="js/globalFunctions.js"></script>
     <script src="js/index.js"></script>

@@ -142,12 +142,15 @@
 }
 
 #destiny #destinies-container{
-    /* swiper vai ficar aqui */
-    padding: 1rem 20rem;
-
+    width: 90%;
+    padding: 2rem 0 4rem 0;
+    position: relative;
 }
 
 #destiny #destinies-container .destiny-card{
+    box-sizing: border-box;
+    width: 560px;
+    height: 454px;
     display: grid;
     justify-content: center;
     align-items: center;
@@ -245,32 +248,13 @@
 }
 
 #feedbacks #feedbacks-cards{
+    width: 85%;
+    padding: 2rem 0 4rem 0;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 4rem;
-
-    padding: 1rem 20rem;
-    overflow-x: scroll;
-    scroll-behavior: smooth;
-
-    &::-webkit-scrollbar-track{
-        background-color: transparent;
-    }
-
-    &::-webkit-scrollbar{
-        width: 10px;
-        background-color: transparent;
-    }
-
-    &::-webkit-scrollbar-thumb{
-        background-color: transparent;
-        border-radius: 1000px;
-    }
-
-    &:hover::-webkit-scrollbar-thumb{
-        background-color: rgba(0, 0, 0, 0.5);
-    }
 }
 
 #feedbacks #feedbacks-cards .feedback-card{

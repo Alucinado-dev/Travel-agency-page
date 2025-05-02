@@ -10,10 +10,13 @@ const themeToggle = document.getElementById('theme-toggle');
 const ToggleIcon = document.getElementById('toggle-icon');
 const aboutImg = document.getElementById('travel-img');
 const menu = document.getElementById('menu');
+const destiniesContainer = document.getElementById('destinies-container');
+const feedbacksContainer = document.getElementById('feedbacks-cards');
 const form = document.getElementById('contact-form');
 const nameInput = document.getElementById('name-input');
 const emailInput = document.getElementById('email-input');
 const messageInput = document.getElementById('message-input');
+
 
 // const swiper = '.swiper';
 const savedTheme = getSavedTheme();
@@ -117,5 +120,65 @@ document.addEventListener("DOMContentLoaded", (event) => {
 });
 
 
+const destiniesSwiperOptions = {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    pagination: {
+        el: `${selector} .swiper-pagination`,
+        clickable: true,
+    },
+
+    navigation: {
+        nextEl: `${selector} .swiper-button-next`,
+        prevEl: `${selector} .swiper-button-prev`,
+    },
+
+    breakpoints: {
+        640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+        768: {
+            slidesPerView: 'auto',
+            spaceBetween: 40,
+        },
+        1024: {
+            slidesPerView: 'auto',
+            spaceBetween: 50,
+        },
+    }
+};
+
+const destiniesSwiper = initializeSwiper(destiniesContainer, destiniesSwiperOptions);
 
 
+const feedbacksSwiperOptions = {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    pagination: {
+        el: `${selector} .swiper-pagination`,
+        clickable: true,
+    },
+
+    navigation: {
+        nextEl: `${selector} .swiper-button-next`,
+        prevEl: `${selector} .swiper-button-prev`,
+    },
+
+    breakpoints: {
+        640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+        768: {
+            slidesPerView: 'auto',
+            spaceBetween: 40,
+        },
+        1024: {
+            slidesPerView: 'auto',
+            spaceBetween: 50,
+        },
+    }
+};
+
+const feedbacksSwiper = initializeSwiper(feedbacksContainer, feedbacksSwiperOptions);
