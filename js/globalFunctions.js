@@ -178,3 +178,45 @@ const hideHeader = (header) =>{
    }
 }
 
+/*  --- fade de entrada ao scrollar pra baixo  com GSAP e ScrollTrigger ---  */
+const scrollFade = (hiddenElements) =>{    
+    hiddenElements.forEach((element) => {
+        gsap.fromTo(element, 
+    
+            { /* estado inicial */
+                opacity: 0,
+                y: 50, 
+                scale: 0.95 
+            },
+    
+            { /* estado final */
+                opacity: 1,
+                y: 0, 
+                scale: 1, 
+                duration: 0.8, 
+    
+                scrollTrigger: { 
+                    trigger: element, 
+                    start: "top 85%", 
+                    toggleActions: "play none none none" 
+                }
+            }
+        );
+    });
+} 
+
+const titleAnimation = (title) =>{
+    gsap.fromTo(title,
+        {
+            opacity: 0,
+            x: 50,
+        },
+        
+        {
+            opacity: 1,
+            x: 0,
+            duration: 1.5,
+            ease: "power3.out"
+        }
+    );
+}

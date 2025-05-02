@@ -1,6 +1,7 @@
 
 const root = document.documentElement;
 const header = document.querySelector('header');
+const mainTitle = document.getElementsByTagName('h1')[0];
 
 const hiddenElements = document.querySelectorAll('.hidden');
 const navLinks = document.querySelectorAll('.nav-link');
@@ -109,31 +110,12 @@ window.addEventListener('scroll', () => {
     lastScrollY = currentScrollY <= 0 ? 0 : currentScrollY;
 });
 
-/*  --- fade de entrada ao scrollar pra baixo  com GSAP e ScrollTrigger ---  */ 
-gsap.registerPlugin(ScrollTrigger); 
-hiddenElements.forEach((element) => {
-    gsap.fromTo(element, 
-
-        { /* estado inicial */
-            opacity: 0,
-            y: 50, 
-            scale: 0.95 
-        },
-
-        { /* estado final */
-            opacity: 1,
-            y: 0, 
-            scale: 1, 
-            duration: 0.8, 
-            
-            scrollTrigger: { 
-                trigger: element, 
-                start: "top 85%", 
-                toggleActions: "play none none none" 
-            }
-        }
-    );
+document.addEventListener("DOMContentLoaded", (event) => {
+    gsap.registerPlugin(ScrollTrigger, TextPlugin); 
+    scrollFade(hiddenElements); /* deixa scroll fade disponivel */
+    titleAnimation(mainTitle);
 });
+
 
 
 
