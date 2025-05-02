@@ -24,23 +24,23 @@
 
     /* fonts */
     --name-font: 'Cinzel decorative', cursive;
-    --btn-header-font:yeseva one;
+    --btn-header-font:"Yeseva One", serif;
 
-    --hero-btn-font:
-    --hero-title-font: playfair display;
+    --hero-btn-font: "Alegreya", serif;
+    --hero-title-font: "Playfair Display", serif;
 
-    --sections-title: cormorant garamond;
-    --sections-subtitle: 
-    --sections-text:
+    --sections-title: "Cormorant Garamond", serif;
+    --sections-subtitle: "MonteCarlo", cursive;
+    --sections-text: "Merriweather", serif;
 
-    --destiny-card-title:
-    --destiny-card-text:
-    --destiny-card-link-text:
+    --destiny-card-title: "Amatic SC", sans-serif;
+    --destiny-card-text: "Karla", sans-serif;
+    --destiny-card-link-text: "Lato", sans-serif;
 
-    --feedback-card-name:
-    --feedback-card-place:
+    --feedback-card-name: "EB Garamond", serif;
+    --feedback-card-place: "Marck Script", cursive;
 
-    --form-label:
+    --form-label:"Work Sans", sans-serif;
 
 
 
