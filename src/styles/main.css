@@ -240,7 +240,7 @@
     color: var(--sections-title-color);
     text-shadow: 0 0 10px var(--sections-title-color);
     text-align: center;
-    margin-bottom: 10rem;
+    margin: 4rem 0;
 
 }
 
@@ -384,8 +384,8 @@
     font-family: var(--sections-title);
     font-size: 4.8rem;
     font-weight: 700;
-    color: var(--sections-title-color);
-    text-shadow: 0 0 10px var(--sections-title-color);
+    color: #5ae0b8;
+    text-shadow: 0 0 5px #5ae0b8;
     text-align: center;
 }
 

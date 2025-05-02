@@ -95,6 +95,10 @@
     --destiny-card-text-color: #eeffef;
     --destiny-card-link-color: #c52a5d;
     --destiny-card-link-text-color: #182641;
+
+    --feedback-card-color:  #06d7a0;
+    --feedbakc-card-name-color:  #f04770;
+    --feedback-card-place-color: #073a4b ;
 }
 
 body{
