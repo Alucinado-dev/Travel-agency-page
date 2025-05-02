@@ -1,3 +1,4 @@
+
 const root = document.documentElement;
 const header = document.querySelector('header');
 
@@ -108,23 +109,31 @@ window.addEventListener('scroll', () => {
     lastScrollY = currentScrollY <= 0 ? 0 : currentScrollY;
 });
 
-/* gerencia mudança de classes nos elementos hidden */
-if (hiddenElements.length > 0) {
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('show');
-            } else {
-                entry.target.classList.remove('show');
+/*  --- fade de entrada ao scrollar pra baixo  com GSAP e ScrollTrigger ---  */ 
+gsap.registerPlugin(ScrollTrigger); 
+hiddenElements.forEach((element) => {
+    gsap.fromTo(element, 
+
+        { /* estado inicial */
+            opacity: 0,
+            y: 50, 
+            scale: 0.95 
+        },
+
+        { /* estado final */
+            opacity: 1,
+            y: 0, 
+            scale: 1, 
+            duration: 0.8, 
+            
+            scrollTrigger: { 
+                trigger: element, 
+                start: "top 85%", 
+                toggleActions: "play none none none" 
             }
-        });
-    });
-
-    hiddenElements.forEach((el) => observer.observe(el));
-} else {
-    console.warn("No elements with class 'hidden' found for Intersection Observer.");
-}
-
+        }
+    );
+});
 
 
 

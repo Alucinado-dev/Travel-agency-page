@@ -124,16 +124,10 @@ img{
 /* --- animações de scroll --- */
 
 /* estado inicial: elementos escondidos */
-.hidden {
-    opacity: 0; 
-    transform: scale(0.9) ; 
-    transition: opacity 500ms ease-out, transform 1200ms ease-out;
-    will-change: opacity, transform;
-}
-  
-  /* estado final: elementos visíveis */
-.show {
-    opacity: 1; 
-    transform:  scale(1) ;
-    transition: opacity 500ms ease-in, transform 1200ms ease-in;
-}
+/* .hidden { GSAP vai animar a partir deste estado */
+    /* opacity: 0; */
+    /* Você pode adicionar outras propriedades iniciais aqui se quiser,
+       por exemplo, para animar a posição:
+       transform: translateY(50px);
+    */
+/* } */
