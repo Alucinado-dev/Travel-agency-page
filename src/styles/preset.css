@@ -1,9 +1,4 @@
 :root{
-    /* colors */
-/*     --name-color-1: #28c2a0;
-    --name-color-2: #5bcba5;
-    --name-color-3: #7ae3d7; */
-
     --name-color-1: #3ad29f;
     --name-color-2: #6cd8d3;
     --name-color-3: #88c1e8; 
@@ -86,6 +81,8 @@
     --feedback-card-color: #073a4b;
     --feedbakc-card-name-color:  #f04770;
     --feedback-card-place-color: #06d7a0 ;
+
+    --text-color-footer: #bacfdd;
 }
 
 [data-theme="light"]{
@@ -108,6 +105,8 @@
     --feedback-card-color:  #06d7a0;
     --feedbakc-card-name-color:  #f04770;
     --feedback-card-place-color: #073a4b ;
+
+    --text-color-footer: #086168;
 }
 
 body{
@@ -136,19 +135,24 @@ img{
 
 /* Estilos para Paginação e Navegação  */
 .swiper-pagination-bullet {
-    background-color: var(--name-color-1);
+    background-color: #7ae3d7;
     opacity: 0.7;
+    transition: all 400ms ease-out;
 }
 
 .swiper-pagination-bullet-active {
-    background-color: var(--name-color-3);
+    background-color: #28c2a0;
     opacity: 1;
+    transform: scale(2);
 }
 
-.swiper-button-prev,
-.swiper-button-next {
-    color: var(--name-color-2); 
-    --swiper-navigation-size: 30px; 
+.swiper-button-prev, .swiper-button-next {
+    background-color: rgba(255, 255, 255, 255, 0.8);
+    color: #5bcba5; 
+    padding: 30px;
+    border-radius: 50%; 
+    backdrop-filter: blur(5px);
+    position: absolute;
     top: 50%; /* Ajuste vertical se necessário */
     transform: translateY(-50%);
 }

@@ -191,7 +191,7 @@
 
 #destiny #destinies-container .destiny-card .destiny-card-description{
     font-family: var(--destiny-card-text);
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 400;
     color: var(--destiny-card-text-color);
     text-align: justify;
@@ -248,7 +248,7 @@
 }
 
 #feedbacks #feedbacks-cards{
-    width: 85%;
+    width: 90%;
     padding: 2rem 0 4rem 0;
     position: relative;
     display: flex;
@@ -433,7 +433,7 @@
     font-size: 1.6rem;
     font-weight: 700;
     color: var(--form-label-color);
-    text-shadow: 0 0 10px var(--form-label-color);
+    text-shadow: 0 0 3px var(--form-label-color);
 }
 
 #contact #contact-form .form-group input,

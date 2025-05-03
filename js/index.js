@@ -131,21 +131,14 @@ const destiniesSwiperOptions = {
     parallax: true,
 
     coverflowEffect: {
-        rotate: 50,
+        rotate: 60,
         stretch: 0,
         depth: 100,
         modifier: 1,
         slideShadows: true,
     },
 
-    creativeEffect: {
-        prev: {
-            translate: [0, 0, -400],
-        },
-        next: {
-            translate: ['100%', 0, 0],
-        },
-    },
+
 
     autoplay: {
         delay: 10000,
@@ -171,7 +164,7 @@ const destiniesSwiperOptions = {
     mousewheel: {
         sensitivity: 0.5,
         releaseOnEdges: true,
-        invert: false,
+        invert: true,
     },
 
     breakpoints: {
@@ -194,16 +187,41 @@ const destiniesSwiper = initializeSwiper(destiniesContainer, destiniesSwiperOpti
 
 /* configurações para o swiper em feedback */
 const feedbacksSwiperOptions = {
-    slidesPerView: 1,
-    spaceBetween: 10,
-    pagination: {
-        el: `.swiper-pagination`,
-        clickable: true,
+    slidesPerView: 'auto',
+    spaceBetween: 100,
+    effect: 'slide',
+    speed: 700,
+    rewind: true,
+    grabCursor: false,
+    parallax: true,
+
+    flipEffect: {
+        slideShadows: true,
+        limitRotation: true,
+
     },
+    
+
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: true,
+    },
+
 
     navigation: {
         nextEl: `.swiper-button-next`,
         prevEl: `.swiper-button-prev`,
+    },
+
+    keyboard: {
+        enabled: true,
+        onlyInViewport: true,
+    },
+
+    mousewheel: {
+        sensitivity: 0.5,
+        releaseOnEdges: true,
+        invert: true,
     },
 
     breakpoints: {
