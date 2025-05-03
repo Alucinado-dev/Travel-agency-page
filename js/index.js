@@ -122,15 +122,56 @@ document.addEventListener("DOMContentLoaded", (event) => {
 /* configuraçoes para o swiper em destinies */
 const destiniesSwiperOptions = {
     slidesPerView: 1,
-    spaceBetween: 50,
+    spaceBetween: 100,
+    effect: 'coverflow',
+    speed: 1200,
+    loop: true,
+    grabCursor: true,
+    centeredSlides: true,
+    parallax: true,
+
+    coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+    },
+
+    creativeEffect: {
+        prev: {
+            translate: [0, 0, -400],
+        },
+        next: {
+            translate: ['100%', 0, 0],
+        },
+    },
+
+    autoplay: {
+        delay: 10000,
+        disableOnInteraction: false,
+    },
+
     pagination: {
         el: `.swiper-pagination`,
         clickable: true,
+        dynamicBullets: true,
     },
 
     navigation: {
         nextEl: `.swiper-button-next`,
         prevEl: `.swiper-button-prev`,
+    },
+
+    keyboard: {
+        enabled: true,
+        onlyInViewport: true,
+    },
+
+    mousewheel: {
+        sensitivity: 0.5,
+        releaseOnEdges: true,
+        invert: false,
     },
 
     breakpoints: {
