@@ -124,13 +124,13 @@ const destiniesSwiperOptions = {
     slidesPerView: 1,
     spaceBetween: 10,
     pagination: {
-        el: `${selector} .swiper-pagination`,
+        el: `.swiper-pagination`,
         clickable: true,
     },
 
     navigation: {
-        nextEl: `${selector} .swiper-button-next`,
-        prevEl: `${selector} .swiper-button-prev`,
+        nextEl: `.swiper-button-next`,
+        prevEl: `.swiper-button-prev`,
     },
 
     breakpoints: {
@@ -156,13 +156,13 @@ const feedbacksSwiperOptions = {
     slidesPerView: 1,
     spaceBetween: 10,
     pagination: {
-        el: `${selector} .swiper-pagination`,
+        el: `.swiper-pagination`,
         clickable: true,
     },
 
     navigation: {
-        nextEl: `${selector} .swiper-button-next`,
-        prevEl: `${selector} .swiper-button-prev`,
+        nextEl: `.swiper-button-next`,
+        prevEl: `.swiper-button-prev`,
     },
 
     breakpoints: {
