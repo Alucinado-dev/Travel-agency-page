@@ -90,7 +90,7 @@ navLinks.forEach(link => {
 
 
 /* gerencia mudança de estilos na header baseado no scroll */
-if (!header.classList.contains('hidden')) { 
+if (!header.classList.contains('show')) { 
     hideHeader(header); 
 }
 

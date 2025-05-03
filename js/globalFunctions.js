@@ -145,15 +145,15 @@ const formValidation = (name, email, message) =>{
 }
 
 
-const showHeader = (header) =>{
-   if (header.classList.contains('hidden')) {
-    header.classList.remove('hidden');
+const hideHeader = (header) =>{
+   if (header.classList.contains('show')) {
+    header.classList.remove('show');
 }
 }
 
-const hideHeader = (header) =>{
-    if (!header.classList.contains('hidden')) {
-        header.classList.add('hidden');
+const showHeader = (header) =>{
+    if (!header.classList.contains('show')) {
+        header.classList.add('show');
    }
 }
 

@@ -13,6 +13,7 @@ header{
     transition: all 400ms ease-out;
     border-bottom: 2px solid rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
+    transform: translateY(-100%);
 }
 
 header.hidden{
