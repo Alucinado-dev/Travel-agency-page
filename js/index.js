@@ -39,7 +39,7 @@ if (savedTheme) {
 
 
 themeTogglerBtn(themeToggle, root, ToggleIcon); /* deixa botão theme disponível */
-heroImgChange(root, 3000, 7); /* faz a mudança da hero image */
+heroImgChange(root, 3000, 14); /* faz a mudança da hero image */
 // swiperFunction(swiper); /* deixa o swiper disponível */
 
 /* chama função aboutImgChange dependendo se o mouse está no elemento ou não */
@@ -119,10 +119,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
     titleAnimation(mainTitle);
 });
 
-
+/* configuraçoes para o swiper em destinies */
 const destiniesSwiperOptions = {
     slidesPerView: 1,
-    spaceBetween: 10,
+    spaceBetween: 50,
     pagination: {
         el: `.swiper-pagination`,
         clickable: true,
@@ -151,7 +151,7 @@ const destiniesSwiperOptions = {
 
 const destiniesSwiper = initializeSwiper(destiniesContainer, destiniesSwiperOptions);
 
-
+/* configurações para o swiper em feedback */
 const feedbacksSwiperOptions = {
     slidesPerView: 1,
     spaceBetween: 10,

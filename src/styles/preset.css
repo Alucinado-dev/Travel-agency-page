@@ -45,13 +45,21 @@
 
 
     /* img */    
-    --hero-img-1: url(/src/imgs/amazon-tourism.jpg);
-    --hero-img-2: url(/src/imgs/amazon-tour3.jpg);
-    --hero-img-3: url(/src/imgs/amazon-tour.jpeg);
-    --hero-img-4: url(/src/imgs/amazon-tour5.jpg);
-    --hero-img-5: url(/src/imgs/amazon-tourism2.jpg);
-    --hero-img-6: url(/src/imgs/amazon-tourism4.jpg);
-    --hero-img-7: url(/src/imgs/amazon-tour-boat.jpg);
+    --hero-img-1: url('src/imgs/hero/turismo (1).jpg');
+    --hero-img-2: url('src/imgs/hero/turismo (2).jpg');
+    --hero-img-3: url('src/imgs/hero/turismo (3).jpg');
+    --hero-img-4: url('src/imgs/hero/turismo (4).jpg');
+    --hero-img-5: url('src/imgs/hero/turismo (5).jpg');
+    --hero-img-6: url('src/imgs/hero/turismo (6).jpg');
+    --hero-img-7: url('src/imgs/hero/turismo (7).jpg');
+    --hero-img-8: url('src/imgs/hero/turismo (8).jpg');
+    --hero-img-9: url('src/imgs/hero/turismo (9).jpg');
+    --hero-img-10: url('src/imgs/hero/turismo (10).jpg');
+    --hero-img-11: url('src/imgs/hero/turismo (11).jpg');
+    --hero-img-12: url('src/imgs/hero/turismo (12).jpg');
+    --hero-img-13: url('src/imgs/hero/turismo.jpg');
+    --hero-img-14: url('src/imgs/hero/turismo.jpeg');
+
 
 
     
