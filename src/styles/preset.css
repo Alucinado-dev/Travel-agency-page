@@ -33,12 +33,12 @@
     --sections-subtitle: "MonteCarlo", cursive;
     --sections-text: "Merriweather", serif;
 
-    --destiny-card-title: "Amatic SC", sans-serif;
+    --destiny-card-title: "Marck Script", cursive;
     --destiny-card-text: "Karla", sans-serif;
     --destiny-card-link-text: "Lato", sans-serif;
 
     --feedback-card-name: "EB Garamond", serif;
-    --feedback-card-place: "Marck Script", cursive;
+    --feedback-card-place:  "Amatic SC", sans-serif;
 
     --form-label:"Work Sans", sans-serif;
 
@@ -66,7 +66,7 @@
 
     --sections-title-color: #5ae0b8;
     --sections-text-color: #dfe7fd;
-    --sections-subtitle-color: #a68a64;
+    --sections-subtitle-color: #e9cca3;
 
     --destiny-card-color: #1d3937;
     --destiny-card-title-color: #9ecda5;

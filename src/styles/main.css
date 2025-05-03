@@ -296,13 +296,26 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-#feedbacks #feedbacks-cards .feedback-card .feedback-header .feedback-avatar figcaption{
+#feedbacks #feedbacks-cards .feedback-card .feedback-header .feedback-avatar h6{
     font-size: 2rem;
     font-weight: 700;
     color: var(--feedbakc-card-name-color);
     text-shadow: 0 0 10px var(--feedback-card-name-color);
     text-align: center;
     font-family: var(--feedback-card-name);
+    text-transform: capitalize;
+}
+
+#feedbacks #feedbacks-cards .feedback-card .feedback-header .feedback-avatar figcaption{
+    font-size: 0.6rem;
+    font-weight: 400;
+    color: whitesmoke;
+    text-align: center;
+    font-family: var(--sections-text);
+}
+
+#feedbacks #feedbacks-cards .feedback-card .feedback-header .feedback-avatar figcaption a{
+    color: inherit;
 }
 
 #feedbacks #feedbacks-cards .feedback-card .feedback-header .feedback-score{
