@@ -140,7 +140,16 @@ const destiniesSwiperOptions = {
         slideShadows: true,
     },
 
+    breakpoints: {        
+        320: {
+            slidesPerView: 1,
+        },
+        768: {
+            slidesPerView: 'auto',
+        },
 
+    },
+    
 
     autoplay: {
         delay: 10000,
