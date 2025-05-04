@@ -1,0 +1,120 @@
+@media screen and (max-width: 1024px) {
+    :root{
+        font-size: 50%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    header #btn-burguer{
+        display: flex;
+    }
+
+    header #menu{
+        display: none;
+    }
+
+    #about{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 5rem 4rem;
+        gap: 2rem;
+    }
+
+    #about #about-description{
+        max-width: 90dvw;
+    }
+
+    #about #about-img{
+        height: 50dvh;
+        width: 50dvw;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    #destiny #destinies-container .destiny-card{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 2rem;
+        height: 60rem;
+    }
+
+    #destiny #destinies-container .destiny-card .destiny-card-img{
+        height: 20rem;
+        width: 20rem;
+    }
+
+    #destiny #destinies-container .destiny-card .destiny-card-description{
+        font-size: 1.2rem;
+        max-width: 100%;
+    }
+
+    #feedbacks #feedbacks-cards .feedback-card{
+        height: 40rem;
+    }
+
+}
+
+@media screen and (max-width: 650px) {
+
+    #destiny #destinies-container .destiny-card .destiny-card-img{
+        height: 30rem;
+        width: 50rem;
+    }
+
+    #destiny #destinies-container .destiny-card{
+        height: 90rem;
+    }
+
+    #destiny #destinies-container .destiny-card .destiny-card-description{
+        font-size: 2.4rem;
+        max-width: 50rem;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    #destiny #destinies-container .destiny-card{
+        height: 60rem;
+        width: 10rem;
+    }
+
+    #destiny #destinies-container .destiny-card .destiny-card-description{
+        font-size: 1.6rem;
+        width: 30rem;
+    }
+
+    #destiny #destinies-container .destiny-card .destiny-card-img{
+        height: 15rem;
+        width: 20rem;
+    }
+
+}
+
+@media screen and (max-width: 430px) {
+
+    #destiny #destinies-container{
+        width: 100%;
+    }
+    
+    #feedbacks #feedbacks-cards{
+        width: 100%;
+    }
+
+    #contact #contact-form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    #destiny #destinies-container .destiny-card .destiny-card-description{
+        width: 100%;
+    }
+}
+

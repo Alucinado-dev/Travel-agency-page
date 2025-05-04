@@ -18,12 +18,19 @@
     <link rel="stylesheet" href="src/styles/reset.css">
     <link rel="stylesheet" href="src/styles/preset.css">
     <link rel="stylesheet" href="src/styles/header.css">
+    <link rel="stylesheet" href="src/styles/sidebar.css">
     <link rel="stylesheet" href="src/styles/main.css">
     <link rel="stylesheet" href="src/styles/footer.css">
+    <link rel="stylesheet" href="src/styles/responsive.css">
 </head>
 
 <body>
     <header>
+        <!-- botão burguer só pra telas menores -->
+        <button id="btn-burguer"> 
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
         <div id="logo">
             <figure>
                 <img src="src/assets/Logoiara.png" alt="Logo da empresa fictícia Iara Viagens">
@@ -48,6 +55,30 @@
         </label>
         
     </header>
+
+    <aside id="mobile-sidebar">
+        <button id="close-sidebar">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <nav id="sidebar-menu">
+            <ul>
+                <li><a class="sidebar-nav-link" href="#hero">Início</a></li>
+                <li><a class="sidebar-nav-link" href="#about">Sobre</a></li>
+                <li><a class="sidebar-nav-link" href="#destiny">Destinos</a></li>
+                <li><a class="sidebar-nav-link" href="#feedbacks">Depoimentos</a></li>
+                <li><a class="sidebar-nav-link" href="#contact">Contato</a></li>
+            </ul>
+        </nav>
+
+        <div id="sidebar-logo">
+            <figure>
+                <img src="src/assets/Logoiara.png" alt="Logo da empresa fictícia Iara Viagens">
+            </figure>
+
+            <h2 id="sidebar-company-name"> Iara Viagens</h2>
+        </div>
+    </aside>
     
     
     <main>
@@ -69,7 +100,7 @@
                 <br> <br>
                 Nossa equipe é formada por profissionais dedicados, que compartilham um profundo respeito pela natureza e pelas comunidades locais. Trabalhamos em estreita colaboração com as populações ribeirinhas, promovendo o turismo sustentável e contribuindo para a preservação do meio ambiente.
                 <br> <br>
-                Ao escolher a Yara Viagens, você estará optando por uma experiência única, que vai além do turismo convencional. Nossos roteiros são cuidadosamente planejados para garantir o máximo de imersão na natureza, com atividades como trilhas na selva, passeios de barco pelos rios amazônicos, observação de aves e interação com as comunidades locais.
+                Ao escolher a Iara Viagens, você estará optando por uma experiência única, que vai além do turismo convencional. Nossos roteiros são cuidadosamente planejados para garantir o máximo de imersão na natureza, com atividades como trilhas na selva, passeios de barco pelos rios amazônicos, observação de aves e interação com as comunidades locais.
                 <br> <br>
                 Venha descobrir os segredos da Amazônia conosco e embarque em uma jornada de aventura, aprendizado e conexão com a natureza.
             </p>

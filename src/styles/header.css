@@ -20,6 +20,25 @@ header.hidden{
     transform: translateY(-100%);
 }
 
+header #btn-burguer{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 4rem;
+    color: var(--btn-header-color);
+    transition:all 300ms ease;
+    height: 100%;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: none;
+    border: none;
+
+    &:hover{
+        color: var(--btn-header-color-hover);
+    }
+}
+
 header #logo{
     display: flex;
     align-items: center;
@@ -131,3 +150,4 @@ header #theme-toggle #toggle-icon-bg #toggle-icon{
     transition: all 1000ms ease-out;
     font-size: 18px;
 }
+

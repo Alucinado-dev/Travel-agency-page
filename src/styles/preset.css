@@ -149,7 +149,6 @@ img{
 .swiper-button-prev, .swiper-button-next {
     background-color: rgba(255, 255, 255, 255, 0.8);
     color: gold; 
-    padding: 30px;
     border-radius: 50%; 
     backdrop-filter: blur(5px);
     position: absolute;
@@ -157,12 +156,6 @@ img{
     transform: translateY(-50%);
 }
 
-.swiper-button-prev {
-    left: -20px;
-}
 
-.swiper-button-next {
-    right: -20px;
-}
 
 

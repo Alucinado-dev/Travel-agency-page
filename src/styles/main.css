@@ -110,7 +110,7 @@
 }
 
 #about #about-img{
-    height: 50vh;
+    height: 50dvh;
     width: 35dvw;
     border-radius: 1rem;
     overflow: hidden;
@@ -149,8 +149,8 @@
 
 #destiny #destinies-container .destiny-card{
     box-sizing: border-box;
-    width: 560px;
-    height: 454px;
+    width: 56rem;
+    height: 45.4rem;
     display: grid;
     justify-content: center;
     align-items: center;
@@ -180,8 +180,8 @@
 }
 
 #destiny #destinies-container .destiny-card .destiny-card-img{
-    height: 300px;
-    width: 300px;
+    height: 30rem;
+    width: 30rem;
     border-radius: 1rem;
     overflow: hidden;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -195,7 +195,7 @@
     font-weight: 400;
     color: var(--destiny-card-text-color);
     text-align: justify;
-    max-width: 200px;
+    max-width: 20rem;
     grid-area: description;
 }
 
@@ -258,8 +258,8 @@
 }
 
 #feedbacks #feedbacks-cards .feedback-card{
-    width: 200px;
-    height: 300px;
+    width: 20rem;
+    height: 30rem;
     background-color: var(--feedback-card-color);
     border-radius: 1rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);

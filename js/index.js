@@ -8,8 +8,11 @@ const navLinks = document.querySelectorAll('.nav-link');
 
 const themeToggle = document.getElementById('theme-toggle');
 const ToggleIcon = document.getElementById('toggle-icon');
-const aboutImg = document.getElementById('travel-img');
+const btnBurguer = document.getElementById('btn-burguer');
+const sidebar = document.getElementById('mobile-sidebar');
+const closeSidebar = document.getElementById('close-sidebar');
 const menu = document.getElementById('menu');
+const aboutImg = document.getElementById('travel-img');
 const destiniesContainer = document.getElementById('destinies-container');
 const feedbacksContainer = document.getElementById('feedbacks-cards');
 const form = document.getElementById('contact-form');
@@ -18,7 +21,6 @@ const emailInput = document.getElementById('email-input');
 const messageInput = document.getElementById('message-input');
 
 
-// const swiper = '.swiper';
 const savedTheme = getSavedTheme();
 
 /* define estado de botão themeToggle baseado no tema salvo em browser  */
@@ -39,8 +41,8 @@ if (savedTheme) {
 
 
 themeTogglerBtn(themeToggle, root, ToggleIcon); /* deixa botão theme disponível */
-heroImgChange(root, 3000, 14); /* faz a mudança da hero image */
-// swiperFunction(swiper); /* deixa o swiper disponível */
+// heroImgChange(root, 3000, 14); /* faz a mudança da hero image */
+
 
 /* chama função aboutImgChange dependendo se o mouse está no elemento ou não */
 aboutImg.addEventListener('mouseover', () =>{
@@ -67,18 +69,18 @@ form.addEventListener('submit', (e) =>{
     }
 });
 
-/* deixa disponível menu lateral */
-/* const menuBtn = document.getElementById('menu-btn');
-const menu = document.getElementById('menu');
-const closeBtn = document.getElementById('close-btn');
-
-menuBtn.addEventListener('click', () => {
-    menu.classList.add('active');
+/* quando a tela é menor que 900px a sidebar fica disponivel*/
+btnBurguer.addEventListener('click', () =>{
+    sidebar.classList.add('show');
 });
 
-closeBtn.addEventListener('click', () => {
-    menu.classList.remove('active');
-}); */
+closeSidebar.addEventListener('click', () =>{
+    sidebar.classList.remove('show');
+});
+
+
+
+
 
 
 /* gerencia mudança de classes nos navLinks */
@@ -167,20 +169,7 @@ const destiniesSwiperOptions = {
         invert: true,
     },
 
-    breakpoints: {
-        640: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-        },
-        768: {
-            slidesPerView: 'auto',
-            spaceBetween: 40,
-        },
-        1024: {
-            slidesPerView: 'auto',
-            spaceBetween: 50,
-        },
-    }
+
 };
 
 const destiniesSwiper = initializeSwiper(destiniesContainer, destiniesSwiperOptions);
@@ -224,20 +213,7 @@ const feedbacksSwiperOptions = {
         invert: true,
     },
 
-    breakpoints: {
-        640: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-        },
-        768: {
-            slidesPerView: 'auto',
-            spaceBetween: 40,
-        },
-        1024: {
-            slidesPerView: 'auto',
-            spaceBetween: 50,
-        },
-    }
+
 };
 
 const feedbacksSwiper = initializeSwiper(feedbacksContainer, feedbacksSwiperOptions);
