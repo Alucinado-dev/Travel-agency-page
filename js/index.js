@@ -123,7 +123,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 /* configuraçoes para o swiper em destinies */
 const destiniesSwiperOptions = {
-    slidesPerView: 1,
+    slidesPerView: 'auto',
     spaceBetween: 100,
     effect: 'coverflow',
     speed: 1200,
