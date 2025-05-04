@@ -41,7 +41,7 @@ if (savedTheme) {
 
 
 themeTogglerBtn(themeToggle, root, ToggleIcon); /* deixa botão theme disponível */
-// heroImgChange(root, 3000, 14); /* faz a mudança da hero image */
+heroImgChange(root, 3000, 14); /* faz a mudança da hero image */
 
 
 /* chama função aboutImgChange dependendo se o mouse está no elemento ou não */
