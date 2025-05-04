@@ -164,15 +164,15 @@ const scrollFade = (hiddenElements) =>{
     
             { /* estado inicial */
                 opacity: 0,
-                y: 50, 
-                scale: 0.95 
+                y: 100, 
+                scale: 0.8 
             },
     
             { /* estado final */
                 opacity: 1,
                 y: 0, 
                 scale: 1, 
-                duration: 0.8, 
+                duration: 1.4, 
     
                 scrollTrigger: { 
                     trigger: element, 
@@ -188,13 +188,13 @@ const titleAnimation = (title) =>{
     gsap.fromTo(title,
         {
             opacity: 0,
-            x: 50,
+            y: 350,
         },
         
         {
             opacity: 1,
-            x: 0,
-            duration: 1.5,
+            y: 0,
+            duration: 2.5,
             ease: "power3.out"
         }
     );
