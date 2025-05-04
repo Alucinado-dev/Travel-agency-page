@@ -95,6 +95,9 @@
 }
 
 @media screen and (max-width: 430px) {
+    #about #about-img{
+        display: none;
+    }
 
     #destiny #destinies-container{
         width: 100%;
