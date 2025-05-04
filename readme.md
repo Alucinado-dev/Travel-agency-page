@@ -41,8 +41,6 @@ Esta landing page apresenta a agência Iara Viagens, destacando seus serviços, 
 *   **Font Awesome:** Biblioteca de ícones.
 
 ## 📄 Licença
-
-*(Opcional: Adicione uma licença se desejar, por exemplo:)*
 Distribuído sob a licença MIT. Veja `LICENSE` para mais informações.
 
 ---
